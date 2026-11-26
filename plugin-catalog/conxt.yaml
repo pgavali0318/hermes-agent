@@ -12,7 +12,10 @@ docs_url: https://github.com/conxtdevelopmentteam/hermes-conxt#readme
 image: https://raw.githubusercontent.com/conxtdevelopmentteam/hermes-conxt/2d2d6b7e034dff293e10c511d49687fd1a41e221/docs/banner.png
 readme: true
 capabilities:
-  provides_tools: []
+  provides_tools:
+  - conxt_search
+  - conxt_remember
+  - conxt_propose
   provides_hooks: []
   provides_middleware: []
   requires_env:
