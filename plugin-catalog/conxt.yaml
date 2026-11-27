@@ -1,21 +1,25 @@
 name: conxt
 title: Conxt
 repo: https://github.com/conxtdevelopmentteam/hermes-conxt
-sha: 2d2d6b7e034dff293e10c511d49687fd1a41e221
-version: "0.1.1"
-description: "Governed memory for Hermes: recalls your decisions before each turn, captures conversations in batches, and puts team memories through human approval before anyone recalls them. Disclosure — Each turn's message (first 500 characters) and the conversation's user and assistant messages are sent to the Conxt API at mcp.conxt.dev (or an https CONXT_BASE_URL you set) with your CONXT_API_KEY; tool results are not sent, but text the assistant repeats is. Every entry Hermes's built-in memory tool adds is also copied to your Conxt memory, and conxt_remember / conxt_propose send the memory text they are given. No telemetry, no shell commands, and nothing is written automatically from cron or subagent runs."
+sha: 7f7a7ac8ec7920b26939edcdf4a287e37c334086
+version: "0.2.0"
+description: "Governed memory for Hermes: recalls your decisions before each turn, captures conversations in batches, puts team memories through human approval before anyone recalls them, and runs agents that keep their instructions, memory and track record in a Conxt folder. Disclosure — Each turn's message (first 500 characters) and the conversation's user and assistant messages are sent to the Conxt API at mcp.conxt.dev (or an https CONXT_BASE_URL you set) with your CONXT_API_KEY; tool results are not sent, but text the assistant repeats is. Every entry Hermes's built-in memory tool adds is also copied to your Conxt memory, and conxt_remember / conxt_propose send the memory text they are given. The agent-folder tools (conxt_define_agent, conxt_start_run, conxt_finish_run, conxt_list_agents) send the folder name, the AGENT.md, run reports and lessons to Conxt's MCP server at the same address, with the same key. No telemetry, no shell commands, and nothing is written automatically from cron or subagent runs."
 maintainer: conxtdevelopmentteam
 tier: community
 category: memory
 requires_hermes: ">=0.21.6"
 docs_url: https://github.com/conxtdevelopmentteam/hermes-conxt#readme
-image: https://raw.githubusercontent.com/conxtdevelopmentteam/hermes-conxt/2d2d6b7e034dff293e10c511d49687fd1a41e221/docs/banner.png
+image: https://raw.githubusercontent.com/conxtdevelopmentteam/hermes-conxt/7f7a7ac8ec7920b26939edcdf4a287e37c334086/docs/banner.png
 readme: true
 capabilities:
   provides_tools:
   - conxt_search
   - conxt_remember
   - conxt_propose
+  - conxt_define_agent
+  - conxt_list_agents
+  - conxt_start_run
+  - conxt_finish_run
   provides_hooks: []
   provides_middleware: []
   requires_env:
